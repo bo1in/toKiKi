@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>To 蒙琪琪</title>
+
+<style type="text/css">
+@font-face {
+	font-family: digit;
+	src: url('digital-7_mono.ttf') format("truetype");
+}
+</style>
+
+<link href="css/default.css" type="text/css" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/garden.js"></script>
+<script type="text/javascript" src="js/functions.js"></script>
+
+</head>
+
+<body>
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">/**</span><br />
+			<span class="space"/><span class="comments">*from 2021-04-12,</span><br />
+			<span class="space"/><span class="comments">*to the future</span><br />
+			<span class="space"/><span class="comments">*/</span><br />
+			Boy name = <span class="keyword">Mr</span> 刘柏麟<br />
+			Girl name = <span class="keyword">Mrs</span> 蒙琪琪<br />
+			<span class="comments"> </span>2021年4月12日 凌晨两点是我人生中最美好的一个清晨</span><br />
+			因为一个有趣 美丽的小姑娘走进了我的生活<br />
+			<span class="comments">我们聊天短暂却又充满了欢乐 如同有着与生俱来的好感</span><br />
+			<span class="comments">从那以后的每时每刻我发现我总会不经意间想起你</span><br />
+			<span class="comments">想你是不是和我一样在想你</span><br />
+			<span class="comments">我偷偷去各种游戏去寻找你的踪迹</span><br />
+			<span class="comments">也会把你的各种联系方式置顶 时不时的看看</span><br />
+			<span class="comments">看看自己是不是漏掉了你需要我的消息</span><br />
+			<span class="comments">我突然意识到了自己好像无法自拔的</span><br/>
+			<span class="keyword">喜欢上了你</span><br />
+			
+			<span class="comments"/><span class="comments">我不曾妄想你属于我 甚至不敢期待有一天会与你相见</span><br />
+			<span class="comments"/><span class="comments">但还是期待美丽天使真的会降临到我的身边</span><br />
+			<span class="keyword">每一天我都在计算着相识的时间</span><br />
+			<span class="comments"/>多希望时间慢些走 这样我才可以慢慢享受这珍贵而又患得患失的奇遇</span><br />
+			<br>
+			<br>
+			Finally，I want to say:<br />
+			Baby, I miss you all the time<br/>
+			and I will love you forever;<br />
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					I always remember that day, when I met you.
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					I will love you forever<br/>
+					<div class="signature">- bo1in</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+var offsetX = $("#loveHeart").width() / 2;
+var offsetY = $("#loveHeart").height() / 2 - 55;
+// var startTime = "2021/03/08 16:55:00"
+// var startTime = new Date();
+var startTime = new Date();
+startTime.setFullYear(2021, 3, 12);
+startTime.setHours(2);
+startTime.setMinutes(00);
+// together.setSeconds(0);
+// together.setMilliseconds(0);
+
+if (!document.createElement('canvas').getContext) {
+	var msg = document.createElement("div");
+	msg.id = "errorMsg";
+	msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+	document.body.appendChild(msg);
+	$("#code").css("display", "none")
+	$("#copyright").css("position", "absolute");
+	$("#copyright").css("bottom", "10px");
+	document.execCommand("stop");
+} else {
+	setTimeout(function () {
+		startHeartAnimation();
+	}, 5000);
+
+	timeElapse(startTime);
+	setInterval(function () {
+		timeElapse(startTime);
+	}, 500);
+
+	adjustCodePosition();
+	$("#code").typewriter();
+}
+</script>
+
+</body>
+</html>
